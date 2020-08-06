@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <title>
+    {% block title %}
+    Sontus
+    {% endblock %}
+  </title>
+  </head>
+  <body>
+{% block body %}
+
+{% endblock %}
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+<script  src="{% static 'js/barfiller.js' %}" type="text/javascript"></script>
+    <script type="text/javascript">
+
+    var typed = new Typed(".typing", {
+      strings: ["DEVELOPER", "COMPETITIVE PROGRAMMER"],
+      typeSpeed:50,
+      backSpeed:50,
+      backDelay:700,
+      loop:true
+    });
+    </script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#bar1').barfiller({barColor: "#23d038", duration: 600});
+    $('#bar2').barfiller({barColor: "#23d038", duration: 600});
+    $('#bar3').barfiller({barColor: "#23d038", duration: 600});
+    $('#bar4').barfiller({barColor: "#23d038", duration: 600});
+    $('#bar5').barfiller({barColor: "#23d038", duration: 600});
+    $('#bar6').barfiller({barColor: "#23d038", duration: 600});
+});
+</script>
+<script type="text/javascript">
+(function(){
+
+    'use strict';
+
+
+    var $projects = $('.projects');
+
+    $projects.isotope({
+        itemSelector: '.item',
+        layoutMode: 'fitRows'
+    });
+
+    $('ul.filters > li').on('click', function(e){
+
+        e.preventDefault();
+
+        var filter = $(this).attr('data-filter');
+
+        $('ul.filters > li').removeClass('active');
+        $(this).addClass('active');
+
+        $projects.isotope({filter: filter});
+
+    });
+
+    $('.card').mouseenter(function(){
+
+        $(this).find('.card-overlay').css({'top': '-100%'});
+        $(this).find('.card-hover').css({'top':'0'});
+
+    }).mouseleave(function(){
+
+        $(this).find('.card-overlay').css({'top': '0'});
+        $(this).find('.card-hover').css({'top':'100%'});
+
+    });
+
+})(jQuery);
+</script>
+  </body>
+</html>

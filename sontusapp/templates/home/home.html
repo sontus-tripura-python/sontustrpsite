@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+
+{% block body  %}
+
+
+<section class="section">
+{% include 'home/navbar.html' %}
+</section>
+<hr>
+<!--- about section-->
+<div class="about_section" id="about">
+{% include 'home/about.html' %}
+</div>
+
+
+<div class="timeline_section">
+{% include 'home/timeline.html' %}
+
+</div>
+<!--- skill section -->
+
+<div class="skill_section" id="skill">
+{% include 'home/skill.html' %}
+</div>
+
+<!--- Service section -->
+{% include 'home/service.html' %}
+<!--- porfolio secton --->
+
+{% endblock %}

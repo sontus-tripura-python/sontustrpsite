@@ -1,0 +1,61 @@
+{% extends 'home/base.html' %}
+{% block title %}
+Sontus-Portfolio
+{% endblock %}
+{% block body %}
+
+<div class="porfolio_section">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+    <div class="category_sectioon">
+      <ul class="filters text-center">
+
+<a class="btn btn-primary" href="{% url 'portfolio' %}">All</a>
+
+{% for cats in portfolio_cats %}
+ <span {% if category.slug == cats.slug %} class="seleted" {% endif %}>
+<a class="btn btn-outline-primary" href="{{ cats.get_absolute_url }}">{{ cats.name }}
+</a>
+</span>
+{% endfor %}
+                </ul>
+    </div>
+
+      <div class="projects">
+        <div class="row">
+          {% for category in portfolio %}
+      <div class="col-lg-4 item html">
+
+        <div class="card">
+
+            <div class="card-head">
+            <img src="{{ category.image.url }}" alt="" class="img-fluid card-img">
+
+            <div class="card-hover">
+            <h2>{{ category.name}}</h2>
+            <p>{{category.description }}</p>
+            </div>
+            </div>
+
+            <div class="card-body text-center">
+            <h4 class="title">{{ category.name}}</h4>
+            <a href="{{ category.link }}" class="btn btn-lg card-btn">See More</a>
+            </div>
+
+        </div>
+
+      </div>
+  {% endfor %}
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+{% endblock %}

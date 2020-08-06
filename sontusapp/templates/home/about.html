@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="title_position">About Me</h2>
+  <div class="row">
+    {% for about in about_me %}
+    <div class="col-md-4 text-center">
+<img src="{{ about.About_photo.url }}" alt="" class="about_img">
+<h2 class="name_title">{{ about.my_name }}</h2>
+    </div>
+    <div class="col-md-6">
+<div class="content_about">
+<p> {{ about.about_description|linebreaks  }}</p>
+</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

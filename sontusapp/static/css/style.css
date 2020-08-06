@@ -1,0 +1,369 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.title_position{
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
+.title_position:after{
+  content: '';
+  display: block;
+  width: 150px;
+  height: 3px;
+  background: #000;
+  margin: 5px auto;
+  border-radius: 10px;
+}
+.navbar-brand{
+  font-size: 25px;
+  font-weight: bold;
+  font-family: monospace;
+  font-style: italic;
+  color: #000!important;
+}
+.nav-link{
+  font-size: 20px;
+  font-weight: bold;
+  font-style: italic;
+  color: #000!important;
+
+}
+.section{
+  position: relative;
+width: 100%;
+overflow: hidden;
+  height: 50vh;
+
+}
+.section::before{
+  content: '';
+  left: 50%;
+  bottom: 0;
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  transform-origin: bottom;
+  transform: translate(-50%) scale(4);
+  border-radius: 50%;
+  background: #ff8f00;
+}
+.postion_title{
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  max-width: 1000px;
+padding-top: 70px;
+  z-index: 1;
+}
+.cv_btn{
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  max-width: 1000px;
+  z-index: 1;
+  padding-top: 10px;
+}
+.typing{
+  font-size: 20px;
+}
+.about_section{
+  min-height: 400px;
+  background: #f0b950;
+
+}
+
+.name_title{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+.content_about{
+color: #fff;
+font-style: italic;
+font-size: 18px;
+  padding: 15px 10px;
+  font-size: 18px;
+}
+.about_img{
+  height: 300px;
+  border-radius: 5px;
+  width: 300px;
+  border-radius: 50%;
+
+
+}
+  .timeline_section{
+    background: #555;
+    min-height: 500px;
+    padding: 10px 15px;
+
+  }
+  .timeline{
+    position: relative;
+  }
+  .timeline:before{
+    position: absolute;
+    top : 0;
+    bottom: 0;
+    width: 6px;
+    left: 0;
+    content: '';
+    background:  #f0b950;
+
+
+  }
+  .timeline-box{
+    position: relative;
+    margin: 10px 0px 10px 30px;
+  }
+  .timeline-box:before{
+    border: 5px solid #f0b950;
+    position: absolute;
+    content: '';
+    top: 30px;
+    left: -52px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #555;
+  }
+  .timeline-box:after{
+    position: absolute;
+    content: '';
+    top: 28px;
+    left: -28px;
+    height: 0px;
+    width: 0px;
+    border: 15px solid transparent;
+    border-right-color: #fff9c4;
+  }
+  .timeline-box:hover:before{
+    background: #f0b950;
+    transition: 1s;
+
+  }
+  .content_timeline{
+      border-radius: 10px;
+    font-style: italic;
+    padding: 15px 25px;;
+    background: #fff9c4;
+  }
+/* skill section ---*/
+.skill_section{
+  background: #f0b950;
+  height: 500px;
+}
+.skill_name{
+  font-size: 22px;
+  color: #fff;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.barfiller {
+    width:100%;
+    height:12px;
+    background:#fcfcfc;
+    border:1px solid #ccc;
+    position:relative;
+    margin-bottom:20px;
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.5);
+}
+
+.barfiller .fill {
+    display:block;
+    position:relative;
+    width:0px;
+    height:100%;
+    background:#333;
+    z-index:1;
+}
+
+.barfiller .tipWrap {
+    display:none;
+}
+
+.barfiller .tip {
+    margin-top:-30px;
+    padding:2px 4px;
+    font-size:11px;
+    color:#fff;
+    left:0px;
+    position:absolute;
+    z-index:2;
+    background: #333;
+}
+
+.barfiller .tip:after {
+    border:solid;
+    border-color:rgba(0,0,0,.8) transparent;
+    border-width:6px 6px 0 6px;
+    content:"";
+    display:block;
+    position:absolute;
+    left:9px;
+    top:100%;
+    z-index:9
+  }
+/*======== service csss  =====*/
+.service_section{
+  background: #555;
+  padding: 15px 0px;
+}
+.service_box{
+  margin-right: 4px;
+  margin-top: 5px;
+  min-height: 200px;
+  width: 250px;
+}
+.fa-code{
+  color: #fff;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+border: 2px solid #fff;
+font-size: 30px;
+padding: 20px;
+background: #222;
+}
+.fa-laptop{
+  color: #fff;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+border: 2px solid #fff;
+font-size: 30px;
+padding: 20px;
+background: #222;
+}
+.fa-tools{
+  color: #fff;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+border: 2px solid #fff;
+font-size: 30px;
+padding: 20px;
+background: #222;
+}
+.fa-laptop-code{
+  color: #fff;
+height: 80px;
+width: 80px;
+border-radius: 50%;
+border: 2px solid #fff;
+font-size: 30px;
+padding: 20px;
+background: #222;
+}
+.service_name{
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+}
+.service_description{
+  font-style: italic;
+
+}
+/*====== Portfolio secton css =====*/
+.porfilio_section{
+  background: #abbfb0;
+  min-height: 500px;
+}
+.card-img{
+  height: 200px;
+  width: 100%;
+}
+.cardbox{
+    position: relative;
+    margin-bottom: 50px;
+    color: #000;
+    border-radius: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    box-shadow: 1px 1px 1.5px rgba(0,0,0,0.075);
+}
+
+.card-head{
+    position: relative;
+    overflow: hidden;
+}
+
+.card-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: rgba(67,78,94,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#fff;
+    padding: 4px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.card-hover{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(40,190,168,0.9);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.cardbody{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4.title{
+    color: #434e5e;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.card-btn{
+    margin-bottom: -40px;
+    font-size: 0.9rem;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #eee;
+    border-radius: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-btn:hover{
+    background-color: #28bea8;
+    color: #fff;
+}
+.porfolio_section{
+  background: #94f0ff;
+  min-height: 650px;
+}
+.category_sectioon{
+  margin-top: 70px;
+}

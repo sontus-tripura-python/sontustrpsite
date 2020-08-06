@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row justify-content-center">
+    {% for timeline in time_line %}
+    <div class="col-md-7 timeline">
+    <div class="timeline-box">
+      <div class="content_timeline">
+        <h2> {{ timeline.title }} </h2>
+        <p> {{ timeline.content_timeline }} </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+</div>
